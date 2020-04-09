@@ -1,0 +1,42 @@
+Rails rspec generator:
+
+need to add gem 'rspec-rails', '~> 3.5' 
+then run:
+
+================================
+
+rails generate rspec:install
+
+===============================
+
+Then add the below code under spec/rails_helper.rb:
+
+========================================
+
+require 'rspec/rails'
+require 'capybara/rspec'
+require 'simple_bdd'
+
+=======================================
+
+
+under configure in spec/rails_helper.rb put the below code
+
+=========================================
+
+config.include SimpleBdd, type: :feature
+
+config.before(:suite) do
+	DatabaseCleaner.strategy = :truncation
+	DatabaseCleaner.clean_with(:truncation)
+end
+
+config.before(:each) do
+	DatabaseCleaner.start
+end
+
+congfig.after(:each) do
+	DatabaseCleaner.clean
+end
+
+===========================================
