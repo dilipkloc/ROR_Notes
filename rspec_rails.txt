@@ -8,6 +8,7 @@ then run:
 rails generate rspec:install
 
 ===============================
+===============================
 
 Then add the below code under spec/rails_helper.rb:
 
@@ -17,6 +18,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'simple_bdd'
 
+=======================================
 =======================================
 
 
@@ -40,3 +42,16 @@ congfig.after(:each) do
 end
 
 ===========================================
+===========================================
+
+installation capybara-webkit gem for rspec:
+
+====================================
+
+before installing run the:
+Ubuntu: sudo apt-get install libqt4-dev libqtwebkit-dev
+for debian: sudo apt-get install libqt4-dev
+
+====================================
+====================================
+
