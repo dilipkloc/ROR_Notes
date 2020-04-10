@@ -1,0 +1,8 @@
+Generating a new job:
+
+=====================================
+rails g job job_name
+
+=====================================
+=====================================
+A new file will be created under app/jobs/job_name_job.rb:
